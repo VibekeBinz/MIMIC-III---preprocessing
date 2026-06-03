@@ -20,7 +20,7 @@ import re
 output_dir = "Data"
 os.makedirs(output_dir, exist_ok=True)
 output_file = os.path.join(output_dir, "Step3_genready.csv")
-output_file_maxi = os.path.join(output_dir, "Step3_maxi.csv")
+output_file_maxi = os.path.join(output_dir, "Step3_maxi_qa_file.csv")
 input_file  = os.path.join(output_dir, "Step2_merged.csv")
 
 print("Loading:", input_file)
