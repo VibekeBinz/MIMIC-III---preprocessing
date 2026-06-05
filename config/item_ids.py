@@ -5,7 +5,7 @@
 
 # CHARTEVENTS - VITALS 
 heart_rate_ids = [211, 220045]
-resp_rate_ids = [615, 618, 220210, 224690]
+resp_rate_ids = [618, 615, 220210, 224690]
 spo2_ids = [646, 220277, 5636, 3288] # 646 is pulse oximetry, 220277 is spo2 from metavision, 5636 is spo2 from carevue, 3288 is O2 sat pre proceudre which is closest to first measurement for some patients, only used to fiull in missing data gaps.
 height_ids = [226707, 226730, 1394]
 weight_ids = [226512, 224639, 580, 581, 763]  # 226531 is lbs, converted to kg in Step1a
