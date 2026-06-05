@@ -36,7 +36,7 @@ lower_bounds_adults = {
     "HEARTRATE": 15,            # bpm
     "SYSTOLIC": 30,             # mmhg
     "DIASTOLIC": 10,            # mmhg
-    "RESP": 2,                  # bpm
+    "RESP": 5,                  # bpm (lower than this would likely lead to ventilator support that would artificially bring the measured  number up, therefore assuming too low values are measurement errors)
     "SPO2": 30,                 # %
     "HEIGHT_raw": 1,           # mixed units - inches, meters, other. 40-220
     "HEIGHT_raw_cm": 100,           # cm
