@@ -245,6 +245,22 @@ print("\n=== Features in final dataset ===")
 # print(list(icu_summary.columns))
 
 print(f"\nFinal dataset: {len(icu_summary)} rows, {icu_summary['SUBJECT_ID'].nunique()} unique patients")
-print(f"Missing ICD9_primary: {icu_summary['ICD9_primary'].isna().sum()}")
-print(f"Missing WEIGHT: {icu_summary['WEIGHT'].isna().sum()}")
-print(f"Missing HEARTRATE: {icu_summary['HEARTRATE'].isna().sum()}")
+vars_to_check = [
+    "HEARTRATE", "SYSTOLIC", "DIASTOLIC", "RESP", "SPO2", "HEIGHT_raw", "WEIGHT",
+    "ALBUMIN",
+    "BLOOD_UREA_NITRO",
+    "CHOLESTEROL",
+    "Creatinine",
+    "GLUCOSE_BLOOD",
+    "HEMOGLOBIN",
+    "NT-proBNP",
+    "POTASSIUM",
+    "SODIUM"
+]
+
+missing = pd.DataFrame({
+    "missing_count":   icu_summary[vars_to_check].isna().sum(),
+    "missing_percent": icu_summary[vars_to_check].isna().mean() * 100
+})
+print("=== Missing numerical values overview — adult population ===")
+print(missing)
